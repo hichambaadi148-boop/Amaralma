@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amar Alma LLC | IT Services &amp; Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4FB;--surface:#fff;--ink:#1B2154;--muted:#575C80;--line:#E1DCEE;--accent:#F2A413;--accent-ink:#1B2154;--teal:#0E9F8E;--hero:#1B2154;--hero-ink:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142B;--surface:#1B1E3F;--ink:#F1EFFA;--muted:#A9ADD0;--line:#2D3160;--hero:#0B0D22;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12142B;--surface:#1B1E3F;--ink:#F1EFFA;--muted:#A9ADD0;--line:#2D3160;--hero:#0B0D22;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font:800 22px 'Bricolage Grotesque',sans-serif;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50% 50% 50% 8px;background:linear-gradient(135deg,var(--accent),var(--teal));display:block}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 16px 'DM Sans',sans-serif;padding:13px 24px;border-radius:999px;background:var(--accent);color:var(--accent-ink);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;height:40px;min-width:40px;padding:0 12px;cursor:pointer;font:600 15px 'DM Sans'}
+.menu{display:none}
+.hero{background:var(--hero);color:var(--hero-ink);padding:84px 0 72px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--teal),transparent 68%);opacity:.55}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,5.6vw,62px);font-weight:800;letter-spacing:-.02em}
+.swap{color:var(--accent);display:inline-block;transition:opacity .3s,transform .3s}
+.swap.out{opacity:0;transform:translateY(10px)}
+.hero p{font-size:19px;max-width:48ch;color:#D5D6EE;margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.term{background:#0A0C1E;border:1px solid rgba(255,255,255,.18);border-radius:16px;overflow:hidden;font:14.5px/1.7 ui-monospace,Menlo,Consolas,monospace}
+.term .bar{display:flex;gap:6px;padding:10px 14px;background:rgba(255,255,255,.07)}
+.term .bar i{width:10px;height:10px;border-radius:50%;background:#555A85}
+.term pre{margin:0;padding:16px 18px;color:#B9F3EA;min-height:190px;white-space:pre-wrap}
+.term .y{color:var(--accent)}
+section{padding:80px 0}
+.head{max-width:640px;margin-bottom:36px}
+.head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.01em}
+.head p{color:var(--muted);margin:12px 0 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:9px 18px;border-radius:999px;cursor:pointer;font:500 15px 'DM Sans'}
+.tab[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.card .ic{font-size:30px}
+.card h3{font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card a{margin-top:auto;padding-top:10px;font-weight:700;color:var(--teal)}
+.how{background:var(--surface);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px;counter-reset:s}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:800 18px 'Bricolage Grotesque';margin-bottom:14px}
+.step h3{font-size:20px;margin-bottom:6px}
+.step p{margin:0;color:var(--muted);font-size:15.5px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{color:var(--muted)}
+.vals{display:grid;gap:12px}
+.val{border-left:4px solid var(--accent);background:var(--surface);padding:14px 18px;border-radius:0 14px 14px 0}
+.val b{display:block}
+.val span{color:var(--muted);font-size:15.5px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);margin:10px 0 0}
+.contact{background:var(--hero);color:var(--hero-ink)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
+.contact h2{font-size:clamp(30px,4vw,44px)}
+.contact p{color:#D5D6EE}
+.info{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.info a{text-decoration:none;color:var(--accent);font-weight:700}
+form{display:grid;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:26px;border-radius:22px}
+label{font-weight:500;font-size:15px;display:grid;gap:6px}
+input,textarea,select{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.95);color:#1B2154;width:100%}
+textarea{min-height:100px;resize:vertical}
+#msg{min-height:22px;color:var(--accent);font-weight:500;margin:0}
+footer{padding:28px 0;color:var(--muted);font-size:14.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:820px){.hero .wrap,.about,.contact .wrap{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.menu{display:inline-block}nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--bg);padding:18px 22px;border-bottom:1px solid var(--line)}nav.open{display:flex}section{padding:56px 0}.hero{padding:56px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top"><i></i>Amar Alma</a>
+<nav id="nav" aria-label="Main">
+<a href="#services">Services</a><a href="#how">How we work</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</nav>
+<div style="display:flex;gap:8px"><button class="icon-btn" id="theme" aria-label="Switch light or dark theme">◐</button><button class="icon-btn menu" id="menu" aria-label="Open menu" aria-expanded="false">Menu</button></div>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>IT consulting that makes <span class="swap" id="swap">technology</span> work for your business.</h1>
+<p>Amar Alma LLC helps companies plan, build and run their technology, with clear advice and practical solutions.</p>
+<div class="cta"><a class="btn" href="#contact">Book a free consultation</a><a class="btn ghost" href="#services">See our services</a></div>
+</div>
+<div class="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div><pre id="term"></pre></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="head"><h2>Our IT services</h2><p>Pick an area to see how we can help.</p></div>
+<div class="tabs" id="tabs" role="group" aria-label="Filter services"></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="how" id="how"><div class="wrap">
+<div class="head"><h2>How we work</h2><p>A simple process from first call to results.</p></div>
+<div class="steps">
+<div class="step"><h3>Discover</h3><p>We listen to your goals and review your current systems.</p></div>
+<div class="step"><h3>Plan</h3><p>You get a clear roadmap with priorities, scope and timing.</p></div>
+<div class="step"><h3>Deliver</h3><p>We build, migrate or secure, and keep you updated.</p></div>
+<div class="step"><h3>Support</h3><p>We stay available to maintain and improve what we built.</p></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+<div class="head" style="margin:0"><h2>About Amar Alma LLC</h2>
+<p>Amar Alma LLC is an IT services and consulting company. We work with businesses that want reliable technology without the complexity.</p>
+<p>We explain things in plain language and focus on solutions that fit your budget and your team.</p></div>
+<div class="vals">
+<div class="val"><b>Clear advice</b><span>No jargon. You always know what we recommend and why.</span></div>
+<div class="val"><b>Practical solutions</b><span>Tools and plans matched to your size and goals.</span></div>
+<div class="val"><b>Responsive support</b><span>Reach us by email or phone when you need help.</span></div>
+</div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+<div class="head"><h2>Frequently asked questions</h2></div>
+<details><summary>What types of businesses do you work with?</summary><p>We work with businesses of different sizes that need IT strategy, support or projects. Contact us to discuss your situation.</p></details>
+<details><summary>How do I get started?</summary><p>Send us a message or call. We will set up an initial conversation to understand your needs.</p></details>
+<details><summary>Can you help with just one project?</summary><p>Yes. You can hire us for a single project, such as a cloud migration or a security review, or for ongoing support.</p></details>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div>
+<h2>Let's talk about your IT needs</h2>
+<p>Tell us what you are working on. We will reply by email.</p>
+<ul class="info">
+<li>Website: <a href="https://www.amaralma.space">www.amaralma.space</a></li>
+<li>Email: <a href="mailto:help@amaralma.space">help@amaralma.space</a></li>
+<li>Phone: <a href="tel:+13078550379">+1 (307) 855-0379</a></li>
+</ul>
+</div>
+<form id="form">
+<label>Your name<input id="n" required autocomplete="name"></label>
+<label>Your email<input id="e" type="email" required autocomplete="email"></label>
+<label>Service needed<select id="s"></select></label>
+<label>Message<textarea id="m" required></textarea></label>
+<button class="btn" type="submit">Send message</button>
+<p id="msg" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Amar Alma LLC. All rights reserved.</span><span>help@amaralma.space · +1 (307) 855-0379</span></div></footer>
+
+<script>
+var S=[
+{n:"IT Strategy & Consulting",c:"Strategy",e:"🧭",d:"Technology roadmaps, audits and budgeting aligned to your business goals."},
+{n:"Cloud Solutions",c:"Cloud",e:"☁️",d:"Cloud planning, migration and management so your systems are flexible and reliable."},
+{n:"Cybersecurity",c:"Security",e:"🛡️",d:"Security assessments, policies and protection for your data and teams."},
+{n:"Software Development",c:"Development",e:"💻",d:"Custom websites, apps and integrations built around how you work."},
+{n:"Managed IT Support",c:"Support",e:"🛠️",d:"Day-to-day help desk, maintenance and monitoring for your IT environment."},
+{n:"Data & Automation",c:"Strategy",e:"📊",d:"Turn your data into reports and automate repetitive tasks."}];
+var cats=["All"].concat(S.map(function(x){return x.c}).filter(function(v,i,a){return a.indexOf(v)==i}));
+var cur="All";
+function $(i){return document.getElementById(i)}
+function tabs(){$("tabs").innerHTML=cats.map(function(c){return '<button class="tab" aria-pressed="'+(c==cur)+'" data-c="'+c+'">'+c+'</button>'}).join("")}
+function grid(){$("grid").innerHTML=S.filter(function(x){return cur=="All"||x.c==cur}).map(function(x){return '<article class="card"><span class="ic" aria-hidden="true">'+x.e+'</span><h3>'+x.n+'</h3><p>'+x.d+'</p><a href="#contact" data-s="'+x.n+'">Ask about this</a></article>'}).join("")}
+$("tabs").onclick=function(e){var c=e.target.dataset.c;if(c){cur=c;tabs();grid()}};
+$("grid").onclick=function(e){var s=e.target.dataset.s;if(s)$("s").value=s};
+$("s").innerHTML='<option>General question</option>'+S.map(function(x){return '<option>'+x.n+'</option>'}).join("");
+$("menu").onclick=function(){var o=$("nav").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("nav").onclick=function(){$("nav").classList.remove("open")};
+$("theme").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+$("form").onsubmit=function(e){e.preventDefault();var s=encodeURIComponent($("s").value+" - message from "+$("n").value),b=encodeURIComponent($("m").value+"\n\nFrom: "+$("n").value+" ("+$("e").value+")");location.href="mailto:help@amaralma.space?subject="+s+"&body="+b;$("msg").textContent="Opening your email app to send the message."};
+var w=["technology","cloud","security","software","data"],k=0;
+setInterval(function(){var s=$("swap");s.classList.add("out");setTimeout(function(){k=(k+1)%w.length;s.textContent=w[k];s.classList.remove("out")},300)},2600);
+var L=['<span class="y">$</span> amaralma --assess','Reviewing your systems...','<span class="y">✓</span> Strategy roadmap ready','<span class="y">✓</span> Cloud plan drafted','<span class="y">✓</span> Security gaps identified','<span class="y">$</span> Ready to talk? help@amaralma.space'],li=0,html="";
+function type(){if(li>=L.length)return;html+=(li?"\n":"")+L[li++];$("term").innerHTML=html;setTimeout(type,900)}
+type();
+$("yr").textContent=new Date().getFullYear();
+tabs();grid();
+</script>
+</body>
+</html>
